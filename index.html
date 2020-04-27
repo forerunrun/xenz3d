@@ -14,7 +14,19 @@
   </head>
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" style= "margin: 0; padding: 0; width: 100vw; height: 100vh"></div>
+      <div id="unityContainer" style= "margin: 0; padding: 0; width: 100vw; height: 100vh">
+      
+      if('orientation' in screen){
+    window.screen.orientation.onchange = function() {
+          if (this.type.startsWith('landscape') && document.querySelector('#element').webkitRequestFullScreen) {
+            document.querySelector('#element').webkitRequestFullscreen();
+          } else {
+            if(document.webkitCancelFullScreen){
+                document.webkitExitFullscreen();
+            }
+          }
+    }
+}</div>
       </div>
   </body>
 </html>
