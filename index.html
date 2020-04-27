@@ -19,7 +19,7 @@
 	if( !location.hash && win.addEventListener ){
 		//scroll to 1
 		window.scrollTo( 0, 1 );
-		var scrollTop = 1,
+		var scrollTop = 0,
 			getScrollTop = function(){
 				return win.pageYOffset || doc.compatMode === "CSS1Compat" && doc.documentElement.scrollTop || doc.body.scrollTop || 0;
 			},
@@ -28,13 +28,13 @@
 				if( doc.body ){
 					clearInterval( bodycheck );
 					scrollTop = getScrollTop();
-					win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+					win.scrollTo( 0, scrollTop === 0 ? 0 : 0 );
 				}	
-			}, 15 );
+			}, 0 );
 		win.addEventListener( "load", function(){
 			setTimeout(function(){
 					//reset to hide addr bar at onload
-					win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+					win.scrollTo( 0, scrollTop === 0 ? 0 : 0 );
 			}, 0);
 		} );
 	}
