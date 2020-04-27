@@ -2535,7 +2535,6 @@ var UnityLoader = UnityLoader || {
                 },
                 put: function(e, t, r) {
                     l.execute(d.name, "put", [e, e.url], t, r)
-                    (function( win ){
 
                 }
             }
