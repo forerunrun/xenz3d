@@ -33,12 +33,7 @@ var UnityLoader = UnityLoader || {
                             if (r.push(e, !0), r.err) throw r.msg || u[r.err];
                             return r.result
                         }
-                        window.addEventListener("load",function() {
-    setTimeout(function(){
-        // This hides the address bar:
-        window.scrollTo(0, 1);
-    }, 0);
-});
+
 
                         function i(e, t) {
                             return t = t || {}, t.raw = !0, o(e, t)
